@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="demo">
+<head>
+    <meta charset="UTF-8">
+    <title>Bowling Center</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div ng-controller="Reservation">
+        <h1>Reservations:</h1>
+        <table>
+            <tr ng-repeat="reservation in reservations">
+                <td>The ID is {{reservation.id}}</td>
+                <td>The USERID is {{reservation.userId}}</td>
+                <td>The DATE is {{reservation.date}}</td>
+                <td>The TIME is {{reservation.time}}</td>
+                <td>The PAIRSOFSHOES is {{reservation.pairsOfShoes}}</td>
+                <td>The NUMBEROFPLAYERS is {{reservation.numberOfPlayers}}</td>
+                <td><button type="button" ng-click="deleteData(reservation.id)">Remove</button></td>
+                </tr>
+        </table>
+
+        <div>
+            <h1>Add reservation</h1>
+            <p>userId: <input type="int" name="userId" ng-model="userId" required /></p>
+            <p>time: <input type="text" name="time" ng-model="time" required /></p>
+            <p>date: <input type="text" name="date" ng-model="date" required /></p>
+            <p>PairsOfShoes: <input type="int" name="pairsOfShoes" ng-model="pairsOfShoes" required /></p>
+            <p>NumberOfPlayers: <input type="int" name="numberOfPlayers" ng-model="numberOfPlayers" required /></p>
+
+            <button ng-click="saveData()">Save reservation</button>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
