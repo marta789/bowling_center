@@ -1,0 +1,31 @@
+<md-dialog>
+    <md-content>
+        <div layout="column" layout-padding>
+            <h1>ADD RESERVATION</h1>
+            <md-input-container>
+                <label>User Id</label>
+                <input type="number" name="userId" ng-model="userId" ng-required="true" />
+            </md-input-container>
+            <md-input-container>
+                <label>Date</label>
+                <input type="text" name="date" ng-model="date" ng-required="true" />
+            </md-input-container>
+            <md-input-container>
+                <label>Time</label>
+                <input type="text" name="time" ng-model="time" ng-required="true"/>
+            </md-input-container>
+            <md-input-container>
+                <label>Number of players</label>
+                <input type="number" name="numberOfPlayers" ng-model="numberOfPlayers" ng-required="true" />
+            </md-input-container>
+            <md-input-container>
+                <label>How many pairs of shoes</label>
+                <input type="number" name="pairsOfShoes" ng-model="pairsOfShoes" ng-required="true" />
+            </md-input-container>
+            <div>
+                <md-button class="md-raised md-primary" ng-click="saveData()"  >Save reservation</md-button>
+            </div>
+        </div>
+    </md-content>
+</md-dialog>
+
