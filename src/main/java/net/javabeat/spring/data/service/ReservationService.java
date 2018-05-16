@@ -10,6 +10,5 @@ public interface ReservationService {
     public Reservation findReservation(long id);
     public Reservation addReservation(Reservation reservation);
     public void delete(long id);
-
 }
 
